@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide:wght@400&family=Manrope:wght@300;400;500;600;700;800&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RevSquared AI Brand Identity - Design System */
+
+@layer base {
+  :root {
+    --background: 13 13 13; /* Charcoal Black #0D0D0D */
+    --foreground: 245 245 245; /* Bright White #F5F5F5 */
+
+    --card: 32 33 90; /* Deep Violet #20215A */
+    --card-foreground: 245 245 245;
+
+    --popover: 32 33 90;
+    --popover-foreground: 245 245 245;
+
+    --primary: 0 229 214; /* Neon Aqua #00E5D6 */
+    --primary-foreground: 13 13 13;
+
+    --secondary: 229 54 193; /* Hot Magenta #E536C1 */
+    --secondary-foreground: 245 245 245;
+
+    --muted: 98 51 234; /* Purple Grape #6233EA */
+    --muted-foreground: 211 212 255; /* Soft Lavender #D3D4FF */
+
+    --accent: 254 221 77; /* Cyber Yellow #FEDD4D */
+    --accent-foreground: 13 13 13;
+
+    --destructive: 229 54 193;
+    --destructive-foreground: 245 245 245;
+
+    --border: 98 51 234;
+    --input: 32 33 90;
+    --ring: 0 229 214;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 13 13 13;
+    --sidebar-foreground: 245 245 245;
+    --sidebar-primary: 0 229 214;
+    --sidebar-primary-foreground: 13 13 13;
+    --sidebar-accent: 32 33 90;
+    --sidebar-accent-foreground: 245 245 245;
+    --sidebar-border: 98 51 234;
+    --sidebar-ring: 0 229 214;
+  }
+
+  .dark {
+    --background: 13 13 13;
+    --foreground: 245 245 245;
+    --card: 32 33 90;
+    --card-foreground: 245 245 245;
+    --popover: 32 33 90;
+    --popover-foreground: 245 245 245;
+    --primary: 0 229 214;
+    --primary-foreground: 13 13 13;
+    --secondary: 229 54 193;
+    --secondary-foreground: 245 245 245;
+    --muted: 98 51 234;
+    --muted-foreground: 211 212 255;
+    --accent: 254 221 77;
+    --accent-foreground: 13 13 13;
+    --destructive: 229 54 193;
+    --destructive-foreground: 245 245 245;
+    --border: 98 51 234;
+    --input: 32 33 90;
+    --ring: 0 229 214;
+    --sidebar-background: 13 13 13;
+    --sidebar-foreground: 245 245 245;
+    --sidebar-primary: 0 229 214;
+    --sidebar-primary-foreground: 13 13 13;
+    --sidebar-accent: 32 33 90;
+    --sidebar-accent-foreground: 245 245 245;
+    --sidebar-border: 98 51 234;
+    --sidebar-ring: 0 229 214;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Audiowide', sans-serif;
+  }
+
+  .brand-script {
+    font-family: 'Pacifico', cursive;
+  }
+}
+
+/* RevSquared AI Custom Components */
+@layer components {
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(0, 229, 214, 0.5);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px rgba(0, 229, 214, 0.8);
+  }
+
+  .magenta-glow {
+    box-shadow: 0 0 20px rgba(229, 54, 193, 0.5);
+  }
+
+  .retro-gradient {
+    background: linear-gradient(135deg, rgb(0, 229, 214) 0%, rgb(98, 51, 234) 100%);
+  } 
+
+  .retro-gradient-alt {
+    background: linear-gradient(135deg, rgb(229, 54, 193) 0%, rgb(32, 33, 90) 100%);
+  }
+
+  .cyber-border {
+    border: 2px solid rgb(0, 229, 214);
+    position: relative;
+  }
+
+  .cyber-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgb(0, 229, 214), rgb(229, 54, 193));
+    z-index: -1;
+    border-radius: inherit;
+  }
+}
